@@ -5,6 +5,11 @@ terraform {
       source = "hashicorp/azurerm"
       version = "~> 3.0.2"
     }
+
+    snowflake = {
+      source  = "Snowflake-Labs/snowflake"
+      version = "0.39.0"
+    }
   }
   cloud {
     organization = "terraform_snowflake"
