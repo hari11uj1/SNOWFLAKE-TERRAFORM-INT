@@ -1,4 +1,4 @@
-/*resource "azurerm_resource_group" "demo" {
+resource "azurerm_resource_group" "demo" {
   name     = "example-resources"
   location = "West Europe"
 }
@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "StorageAccountDemo" {
     video = "azure"
     channel = "hari11"
   }
-}*/
+}
 
 data "azurerm_key_vault" "example" {
   name                = "snowflake-terraform"
