@@ -70,9 +70,9 @@ provider "snowflake" {
  password = data.azurerm_key_vault_secret.test.value
 }
 
-module "snowflake_WAREHOUSE_WH0015" {                                                             # NAME OF THE MODULE
+module "snowflake_WAREHOUSE_WH0022" {                                                             # NAME OF THE MODULE
   source            = "./WAREHOUSE_MODULE"                                                       # THIS IS THE SOURCE OF THE MODULE
-  warehouse_name    = "snowflake_WAREHOUSE_WH0015"                                                # THIS IS THE NAME OF THE WAREHOUSE 
+  warehouse_name    = "snowflake_WAREHOUSE_WH0022"                                                # THIS IS THE NAME OF THE WAREHOUSE 
   warehouse_size    = "SMALL"                                                                    # THIS IS THE REQUIRED SIZE OF THE WAREHOUSE
   roles = {
     "OWNERSHIP" = ["SYSADMIN"],                                                                  # HERE WE WILL GIVE THE WAREHOUSE_GRANT AND PREVILEGE FOR PERTICULAR ROLES
