@@ -1,3 +1,8 @@
+resource "azurerm_resource_group" "demo" {
+  name     = "example-resources"
+  location = "West Europe"
+}
+
 resource "azurerm_storage_account" "StorageAccountDemo" {
   name                     = "satestant000012"
   resource_group_name      = azurerm_resource_group.demo.name
