@@ -43,7 +43,7 @@ data "azurerm_key_vault_secret" "test2" {
   key_vault_id = data.azurerm_key_vault.example.id
 }
 
-output "snowflake_password" {
+/*output "snowflake_password" {
   value = nonsensitive(data.azurerm_key_vault_secret.test.value)
   
   #sensitive = true
