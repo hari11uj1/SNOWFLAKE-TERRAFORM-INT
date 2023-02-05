@@ -43,19 +43,20 @@ data "azurerm_key_vault_secret" "test2" {
   key_vault_id = data.azurerm_key_vault.example.id
 }
 
-/*output "snowflake_password" {
-  value = nonsensitive(data.azurerm_key_vault_secret.test.value)
+output "snowflake_password" {
+  value = data.azurerm_key_vault_secret.test.value
   
-  #sensitive = true
+  sensitive = true
 }
 
 output "snowflake_account" {
-  value = nonsensitive(data.azurerm_key_vault_secret.test1.value)
-  #sensitive = true
+  value = data.azurerm_key_vault_secret.test1.value
+  sensitive = true
 }
 
 output "snowflake_username" {
-  value = nonsensitive(data.azurerm_key_vault_secret.test2.value)
+  value = data.azurerm_key_vault_secret.test2.value
+  sensitive = true
 }
 
 /*output "snowflake_account" {
@@ -69,9 +70,9 @@ provider "snowflake" {
  password = data.azurerm_key_vault_secret.test.value
 }
 
-module "snowflake_WAREHOUSE_WH0014" {                                                             # NAME OF THE MODULE
+module "snowflake_WAREHOUSE_WH0015" {                                                             # NAME OF THE MODULE
   source            = "./WAREHOUSE_MODULE"                                                       # THIS IS THE SOURCE OF THE MODULE
-  warehouse_name    = "snowflake_WAREHOUSE_WH0014"                                                # THIS IS THE NAME OF THE WAREHOUSE 
+  warehouse_name    = "snowflake_WAREHOUSE_WH0015"                                                # THIS IS THE NAME OF THE WAREHOUSE 
   warehouse_size    = "SMALL"                                                                    # THIS IS THE REQUIRED SIZE OF THE WAREHOUSE
   roles = {
     "OWNERSHIP" = ["SYSADMIN"],                                                                  # HERE WE WILL GIVE THE WAREHOUSE_GRANT AND PREVILEGE FOR PERTICULAR ROLES
