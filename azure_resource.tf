@@ -68,7 +68,7 @@ resource "azurerm_resource_group" "perview-trile" {
   location = "East US"
 }
 
-resource "azurerm_resource_group" "perview-trile" {
+resource "azurerm_resource_group" "perview-trile1" {
   name     = "purview-trile11"
   location = "East US"
 }
@@ -83,10 +83,10 @@ resource "azurerm_resource_group" "perview-trile" {
   }
 }*/
 
-resource "azurerm_purview_account" "example" {
+resource "azurerm_purview_account" "example1" {
   name                = "purview-trile11"
-  resource_group_name = azurerm_resource_group.perview-trile.name
-  location            = azurerm_resource_group.perview-trile.location
+  resource_group_name = azurerm_resource_group.perview-trile1.name
+  location            = azurerm_resource_group.perview-trile1.location
 
   identity {
     type = "SystemAssigned"
