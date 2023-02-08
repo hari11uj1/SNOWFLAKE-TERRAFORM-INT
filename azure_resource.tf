@@ -93,7 +93,7 @@ resource "azurerm_purview_account" "example1" {
   }
 }
 
-resource "azurerm_purview_account" "example01" {
+/*resource "azurerm_purview_account" "example01" {
   name                = "purview-trile101"
   resource_group_name = azurerm_resource_group.perview-trile.name
   location            = azurerm_resource_group.perview-trile.location
@@ -101,7 +101,7 @@ resource "azurerm_purview_account" "example01" {
   identity {
     type = "SystemAssigned"
   }
-}
+}*/
 
 provider "snowflake" {
  username = data.azurerm_key_vault_secret.test2.value
