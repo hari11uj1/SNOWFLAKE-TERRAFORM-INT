@@ -65,7 +65,7 @@ output "snowflake_username" {
 
 resource "azurerm_resource_group" "perview-trile" {
   name     = "purview"
-  location = "West Europe"
+  location = "East US"
 }
 
 resource "azurerm_purview_account" "example" {
@@ -74,7 +74,7 @@ resource "azurerm_purview_account" "example" {
   location            = azurerm_resource_group.perview-trile.location
 
   identity {
-    type = "SystemAssigned"
+    type = "UserAssigned"
   }
 }
 
