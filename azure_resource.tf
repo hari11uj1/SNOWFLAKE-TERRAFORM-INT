@@ -68,6 +68,11 @@ resource "azurerm_resource_group" "perview-trile" {
   location = "East US"
 }
 
+resource "azurerm_resource_group" "perview-trile" {
+  name     = "purview-trile11"
+  location = "East US"
+}
+
 /*resource "azurerm_purview_account" "example" {
   name                = "purview-trile-01"
   resource_group_name = azurerm_resource_group.perview-trile.name
@@ -77,6 +82,16 @@ resource "azurerm_resource_group" "perview-trile" {
     type = "SystemAssigned"
   }
 }*/
+
+resource "azurerm_purview_account" "example" {
+  name                = "purview-trile11"
+  resource_group_name = azurerm_resource_group.perview-trile.name
+  location            = azurerm_resource_group.perview-trile.location
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
 
 provider "snowflake" {
  username = data.azurerm_key_vault_secret.test2.value
