@@ -74,7 +74,7 @@ resource "azurerm_purview_account" "example" {
   location            = azurerm_resource_group.perview-trile.location
 
   identity {
-    type = "UserAssigned"
+    type = "SystemAssigned"
   }
 }
 
