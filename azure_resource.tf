@@ -70,7 +70,7 @@ resource "azurerm_resource_group" "perview-trile" {
 
 resource "azurerm_resource_group" "perview-trile1" {
   name     = "purview-trile11"
-  location = "East US"
+  location = "West Europe"
 }
 
 /*resource "azurerm_purview_account" "example" {
@@ -95,8 +95,8 @@ resource "azurerm_purview_account" "example1" {
 
 resource "azurerm_purview_account" "example01" {
   name                = "purview-trile101"
-  resource_group_name = azurerm_resource_group.perview-trile1.name
-  location            = azurerm_resource_group.perview-trile1.location
+  resource_group_name = azurerm_resource_group.perview-trile.name
+  location            = azurerm_resource_group.perview-trile.location
   managed_resource_group_name = "purview_managed_resource"
   identity {
     type = "SystemAssigned"
