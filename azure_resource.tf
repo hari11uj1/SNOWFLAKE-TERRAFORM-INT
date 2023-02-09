@@ -105,7 +105,7 @@ resource "azurerm_purview_account" "example1" {
 
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Purview/accounts@2021-07-01"
-  name = "purview_new_01"
+  name = "harishperview"
   location = "West Europe"
   parent_id = azurerm_resource_group.perview-trile1.id
   
