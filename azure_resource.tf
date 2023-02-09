@@ -123,6 +123,25 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 
+resource "azapi_resource" "symbolicname1" {
+  type = "Microsoft.Purview/accounts@2021-07-01"
+  name = "harishperview01"
+  location = "West Europe"
+  parent_id = azurerm_resource_group.perview-trile1.id
+  
+  identity {
+    type = "SystemAssigned"
+    #identity_ids = ["SystemAssigned"]
+  }
+  body = jsonencode({
+    properties = {
+      cloudConnectors = {}
+      managedResourceGroupName = "purview-trile1010"
+      publicNetworkAccess = "Enabled"
+    }
+  })
+}
+
 provider "snowflake" {
  username = data.azurerm_key_vault_secret.test2.value
  account = data.azurerm_key_vault_secret.test1.value
