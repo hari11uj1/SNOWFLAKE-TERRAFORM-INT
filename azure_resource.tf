@@ -73,6 +73,7 @@ resource "azurerm_resource_group" "perview-trile1" {
   location = "West Europe"
 }
 
+
 /*resource "azurerm_purview_account" "example" {
   name                = "purview-trile-01"
   resource_group_name = azurerm_resource_group.perview-trile.name
