@@ -63,12 +63,12 @@ output "snowflake_username" {
   
 }*/
 
-resource "azurerm_resource_group" "perview-trile" {
+/*resource "azurerm_resource_group" "perview-trile" {
   name     = "purview"
   location = "East US"
-}
+}*/
 
-/*resource "azurerm_resource_group" "perview-trile1" {
+resource "azurerm_resource_group" "perview-trile1" {
   name     = "purview-trile11"
   location = "West Europe"
 }
