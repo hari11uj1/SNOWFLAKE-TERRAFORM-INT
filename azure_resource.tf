@@ -68,7 +68,7 @@ output "snowflake_username" {
   location = "East US"
 }*/
 
-resource "azurerm_resource_group" "perview-trile1" {
+/*resource "azurerm_resource_group" "perview-trile1" {
   name     = "purview-trile11"
   location = "West Europe"
 }
@@ -82,7 +82,7 @@ resource "azurerm_resource_group" "perview-trile1" {
   identity {
     type = "SystemAssigned"
   }
-}*/
+}
 
 resource "azurerm_purview_account" "example1" {
   name                = "purview-trile001"
@@ -92,7 +92,7 @@ resource "azurerm_purview_account" "example1" {
   identity {
     type = "SystemAssigned"
   }
-}
+}*/
 
 
 /*resource "azurerm_purview_account" "example01" {
@@ -103,7 +103,7 @@ resource "azurerm_purview_account" "example1" {
   identity {
     type = "SystemAssigned"
   }
-}*/
+}
 
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Purview/accounts@2021-07-01"
@@ -142,7 +142,7 @@ resource "azapi_resource" "symbolicname1" {
     }
   })
 }
-
+*/
 
 provider "snowflake" {
  username = data.azurerm_key_vault_secret.test2.value
