@@ -93,6 +93,7 @@ resource "azurerm_purview_account" "example1" {
   }
 }
 
+
 /*resource "azurerm_purview_account" "example01" {
   name                = "purview-trile101"
   resource_group_name = azurerm_resource_group.perview-trile.name
