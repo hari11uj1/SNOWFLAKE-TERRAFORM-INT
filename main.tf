@@ -10,6 +10,11 @@ terraform {
       source  = "Snowflake-Labs/snowflake"
       version = "0.39.0"
     }
+
+    azapi = {
+      source = "Azure/azapi"
+      version = "1.3.0"
+    }
   }
   cloud {
     organization = "terraform_snowflake"
