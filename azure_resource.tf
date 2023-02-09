@@ -110,8 +110,8 @@ resource "azapi_resource" "symbolicname" {
   parent_id = azurerm_resource_group.perview-trile1.id
   
   identity {
-    type = "string"
-    identity_ids = ["SystemAssigned"]
+    type = "SystemAssigned"
+    #identity_ids = ["SystemAssigned"]
   }
   body = jsonencode({
     properties = {
