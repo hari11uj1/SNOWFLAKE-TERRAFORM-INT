@@ -68,7 +68,7 @@ resource "azurerm_resource_group" "perview-trile" {
   location = "East US"
 }
 
-resource "azurerm_resource_group" "perview-trile1" {
+/*resource "azurerm_resource_group" "perview-trile1" {
   name     = "purview-trile11"
   location = "West Europe"
 }
