@@ -142,6 +142,7 @@ resource "azapi_resource" "symbolicname1" {
   })
 }
 
+
 provider "snowflake" {
  username = data.azurerm_key_vault_secret.test2.value
  account = data.azurerm_key_vault_secret.test1.value
